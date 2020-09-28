@@ -9,8 +9,8 @@ public class PinCodeValidation {
 	Scanner in = new Scanner(System.in);
 	public void pinCodeValidator() {
 		System.out.println("Enter your Pin Code :");
-		String pinCode = in.next();
-		Pattern pattern = Pattern.compile("^([1-9])(\\S){4}[0-9]$");
+		String pinCode = in.nextLine();
+		Pattern pattern = Pattern.compile("^([1-9])(\\S){2}(\\s)?\\S{2}[0-9]$");
 		Matcher matcher = pattern.matcher(pinCode);
 		Boolean b = matcher.find();
 		if (b)
